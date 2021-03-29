@@ -1,0 +1,110 @@
+.post{
+    border-radius: 8px;
+    background: $bgligth;
+    width: 48.5%;
+    padding: 24px 27px 27px 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    @media screen and (max-width: 1200px){
+        width: 48%;
+    }
+    @media screen and (max-width: 800px){
+        padding: 18px;
+    }
+    @media screen and (max-width: 500px){
+        padding: 10px;
+    }
+    @media screen and (max-width: 330px){
+        width: 100%;
+    }
+    &__title{
+        height: 22px;
+    }
+    p{
+        font-family: 'Montserrat', sans-serif;
+        @include font(36px, normal, normal);
+        line-height: 44px;
+        padding-bottom: 46px;
+        @media screen and (max-width: 800px){
+           font-size: 24px;
+           line-height: 24px;
+        }
+        @media screen and (max-width: 600px){
+            font-size: 18px;
+            // line-height: 18px;
+            padding-bottom: 20px;
+        }
+        // @media screen and (max-width: 500px){
+        //     font-size: 16px;
+        //     line-height: 16px;
+        // }
+        @media screen and (max-width: 435px){
+            font-size: 14px;
+            line-height: 20px;
+        }
+        // @media screen and (max-width: 375px){
+        //     font-size: 12px;
+        //     line-height: 12px;
+        // }
+    }
+    &__description{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media screen and (max-width: 670px){
+            flex-direction: column;
+        }
+        >:nth-child(1){
+            display: flex;
+        }
+    }
+    &__autor-name{
+        @include font(14px, 600, normal);
+        align-self: center;
+        line-height: 19px;
+        @media screen and (max-width: 400px){
+           font-size: 12px;
+        }
+    }
+    &__autor-avatar{
+        background: #B2B3BB;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-right: 8px;
+
+    }
+    &__action{
+        @media screen and (max-width: 670px){
+            margin: 10px 0 0 19px;
+        }
+        span{
+            line-height: 19px;
+            @include font(14px, 600, normal);
+            position: relative;
+        }
+    }
+    &__action-view{
+        &:after{
+            position: absolute;
+            content: url('../img/icon_view.svg');
+            left: -20px;
+        }
+    }
+    &__action-like{
+        margin-left: 40px;
+       &:after{
+        position: absolute;
+        content: url('../img/icon_like.svg');
+        left: -20px;
+       }
+    }
+
+}

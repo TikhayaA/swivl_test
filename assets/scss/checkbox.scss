@@ -1,0 +1,73 @@
+.checkbox{
+    display: flex;
+    @media screen and (max-width: 1200px){
+        margin-top: 20px;
+    }
+    @media screen and (max-width: 670px){
+        margin-top: 0px;
+    }
+    .checkbox{
+        margin: 0 30px;
+    }
+    .checkbox__toggle{
+        display: none;
+    
+        &__label{
+            width: 40px;
+            vertical-align: middle;
+            display: inline-block;
+            cursor: pointer;
+        }
+        &__label:before{
+            content: "";
+            width: 40px;
+            height: 24px;
+            background: #ED5267;
+            border: 1px solid #ED5267;
+            border-radius: 70px;
+            box-sizing: border-box;
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+            vertical-align: middle;
+            -webkit-border-radius: 70px;
+            -moz-border-radius: 70px;
+            -ms-border-radius: 70px;
+            -o-border-radius: 70px;
+}
+        &__label:after{
+            content: "";
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            position: relative;
+            right: -19px;
+            top: -22px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50px;
+            background: #FFFFFF;
+            background: #FFFFFF;
+            box-shadow: 0px 5px 20px 5px rgba(227, 174, 59, 0.1);
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+            transition: all 0.3;
+            -webkit-transition: all 0.3;
+            -moz-transition: all 0.3;
+            -ms-transition: all 0.3;
+            -o-transition: all 0.3;
+}    
+        &:checked + .checkbox__toggle__label:after{
+            right: -2px;
+            border-radius: 50px;
+            background: #FFFFFF;
+        }
+    }
+    span{
+        @include font(16px, 600, normal);
+        line-height: 22px;
+        cursor: pointer;
+    }
+}

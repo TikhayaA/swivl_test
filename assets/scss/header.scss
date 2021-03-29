@@ -1,0 +1,117 @@
+.header{
+    background: $bgligth;
+    width: 100%;
+    padding: 25px 0 23px;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+    position: relative;
+    &__wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media screen and (max-width: 768px){
+            position: relative;
+        }
+    }
+    &__logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__navigation{
+        ul{
+            display: flex;
+            flex-direction: row;
+            margin-top: 25px;
+        }
+    }
+    &__navigation-list{
+        margin-right: 37px;
+        @include font(14px, 600, normal);
+        text-transform: uppercase;
+        color: #3E4056;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        @media screen and (max-width: 425px){
+            margin-right: 20px;
+            font-size: 12px;
+        }
+        &_active{
+            opacity: 1;
+            position: relative;
+            &:after{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(135deg, #FF974F 0%, #E32C75 100%);
+                bottom: -23px;
+                left: 0;
+
+            }
+        }
+    }
+    &__account-navigation{
+        width: 24%;
+        @media screen and (max-width: 1200px){
+            width: 60%;
+        }
+    }
+    &__btn{
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background: linear-gradient(135deg, #FF974F 0%, #E32C75 100%);
+        position: absolute;
+        right: 0;
+        bottom: -54px;
+        border: none;
+        @media screen and (max-width: 768px){
+            right: 30px;
+        }
+        @media screen and (max-width: 768px){
+            width: 50px;
+            height: 50px;
+            top: 64px;
+        }
+        @media screen and (max-width: 425px){
+            right: 16px;  
+        }
+        @media screen and (max-width: 375px){
+            width: 40px;
+            height: 40px;
+            top: 68px;
+        }
+        &:before{
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1.8px;
+            background: $bgligth;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            }
+        &:after{
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1.8px;
+            background:$bgligth;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(90deg);
+            -webkit-transform: translate(-50%, -50%) rotate(90deg);
+            -moz-transform: translate(-50%, -50%) rotate(90deg);
+            -ms-transform: translate(-50%, -50%) rotate(90deg);
+            -o-transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+}
