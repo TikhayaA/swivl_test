@@ -2,7 +2,7 @@
     border-radius: 8px;
     background: $bgligth;
     width: 48.5%;
-    padding: 24px 27px 27px 24px;
+    padding: 24px 24px 27px 24px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -22,33 +22,48 @@
     }
     &__title{
         height: 22px;
+        display: flex;
+        cursor: pointer;
+        img{
+            margin-right: 4px;
+        }
+        span{
+            @include adaptive-fonts(16, 10);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 22px;
+        }
+        .hashtag{
+            margin-left: 4px;
+            background: #ECF1F8;
+            border-radius: 6px;
+            padding: 0px 5px 0px 4px;
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis;
+            align-items: center;
+            width: 73%;
+            @media screen and (max-width: 700px){
+                width: 50%;
+            }
+        }
     }
     p{
         font-family: 'Montserrat', sans-serif;
-        @include font(36px, normal, normal);
+        @include adaptive-fonts(36, 14);
+        font-style: normal;
+        font-weight: normal;
         line-height: 44px;
-        padding-bottom: 46px;
+        padding: 8px 0 44px;
         @media screen and (max-width: 800px){
-           font-size: 24px;
-           line-height: 24px;
+           line-height: 30px;
         }
         @media screen and (max-width: 600px){
-            font-size: 18px;
-            // line-height: 18px;
             padding-bottom: 20px;
         }
-        // @media screen and (max-width: 500px){
-        //     font-size: 16px;
-        //     line-height: 16px;
-        // }
         @media screen and (max-width: 435px){
-            font-size: 14px;
             line-height: 20px;
         }
-        // @media screen and (max-width: 375px){
-        //     font-size: 12px;
-        //     line-height: 12px;
-        // }
     }
     &__description{
         display: flex;
@@ -105,6 +120,19 @@
         content: url('../img/icon_like.svg');
         left: -20px;
        }
+    }
+    &__share{
+        @include font(18px, normal, normal);
+        font-family: 'OpenSans', sans-serif;
+        border: none;
+        background: none;
+        line-height: 25px;
+        text-align: right;
+        color: #F05D63;
+        @media screen and (max-width: 670px){
+            margin-left:-19px;
+            font-size: 14px;
+        }
     }
 
 }

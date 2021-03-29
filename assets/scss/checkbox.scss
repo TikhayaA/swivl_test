@@ -1,10 +1,12 @@
 .checkbox{
     display: flex;
+    margin-left: 13px;
     @media screen and (max-width: 1200px){
         margin-top: 20px;
+        margin-left: 0;
     }
     @media screen and (max-width: 670px){
-        margin-top: 0px;
+        margin: 0px;
     }
     .checkbox{
         margin: 0 30px;

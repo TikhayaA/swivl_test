@@ -34,11 +34,11 @@
     &__statistic{
         display: flex;
         justify-content: space-between;
-        margin: 25px 61px 18px 0;
+        margin: 31px 61px 31px 0;
         @media screen and (min-width: 500px) and (max-width: 1200px){
             display: flex;
             justify-content: flex-start;
-            margin: 0px 61px 18px 0;
+            margin: 0px 61px 28px 0;
             
         }
         @media screen and (max-width: 700px){
@@ -68,12 +68,11 @@
         }
     }
     p{
-        @include font(16px, normal, normal);
+        @include adaptive-fonts(16, 14);
+        font-style: normal;
+        font-weight: normal;
         line-height: 24px;
         color: #3E3F58;
-        @media screen and (max-width: 1200px){
-            font-size: 14px;
-        }
     }
     &__avatar{
         width: 41%;
@@ -97,15 +96,11 @@
         }
         :nth-child(1){
             font-family: 'Montserrat', sans-serif;
-            @include font(24px, 600, normal);
+            font-style: normal;
+            font-weight: 600;
+            @include adaptive-fonts(24, 14);
             line-height: 26px;
             color: #3E3F58;
-            @media screen and (max-width: 900px){
-                @include font(20px, 600, normal);
-            }
-            @media screen and (max-width: 375px){
-                font-size: 14px;
-            }
         }
         :nth-child(2){
             @include font(16px, normal, normal);
@@ -123,6 +118,7 @@
             }
         }
         :nth-child(3){
+            font-family: 'OpenSans', sans-serif;
             position: relative;
             @include font(16px, normal, normal);
             line-height: 20px;
